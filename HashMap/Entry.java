@@ -13,7 +13,7 @@ public class Entry {
 
         for (Map.Entry<String, Integer> entry : marks.entrySet()) {
             String name = entry.getKey();
-            if (entry.getKey().equals("Harini")) {
+            if (entry.getKey().equals("Deepak")) {
                 entry.setValue(21);
             }
             Integer score = entry.getValue();
