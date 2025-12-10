@@ -1,3 +1,4 @@
+package ArrayPractice;
 public class InsertElement {
     public static void main(String[] args) {
         int[] arr = new int[7];

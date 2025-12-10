@@ -1,3 +1,4 @@
+package ArrayPractice;
 public class RemoveByValue {
     public static void main(String[] args) {
         int[] arr = { 17, 81, 21, 10, 9 };
