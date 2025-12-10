@@ -23,7 +23,7 @@ public class SearchInsertPosition {
             }
         }
         System.out.print("Not Found");
-        return -1;
+        return left;
     }
 
     public static void main(String[] args) {
