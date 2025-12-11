@@ -2,7 +2,6 @@ package String;
 
 import java.util.*;
 
-import javax.swing.plaf.synth.SynthStyle;
 
 public class ReverseEachWord {
     public static String reverseEachWord(String s){
