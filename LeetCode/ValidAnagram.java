@@ -1,7 +1,5 @@
 package LeetCode;
 
-import java.util.HashMap;
-
 public class ValidAnagram {
     public boolean isAnagram(String s, String t) {
         s = s.toLowerCase();
