@@ -10,7 +10,7 @@ public class SortColors {
                 nums[low] = nums[mid];
                 nums[mid] = temp;
                 low++;
-                mid++;
+                mid++; 
             } else if (nums[mid] == 1) {
                 mid++;
             } else {
