@@ -14,7 +14,6 @@ public class ReverseEachWord {
         }
 
         return result.toString().trim();
-
     }
 
     public static void main(String[] args) {
