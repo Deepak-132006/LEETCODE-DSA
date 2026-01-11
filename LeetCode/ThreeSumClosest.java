@@ -3,7 +3,7 @@ package LeetCode;
 import java.util.Arrays;
 
 public class ThreeSumClosest {
-    public int threeSumClosest(int[] nums, int target) {
+      public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
         int closestSum = Integer.MAX_VALUE ;
         int sum = 0;
@@ -18,6 +18,8 @@ public class ThreeSumClosest {
                     left++;
                 } else if (sum > target) {
                     right--;
+                } else if (sum == target) {
+                    return closestSum;
                 }
             }
         }
