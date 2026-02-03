@@ -33,5 +33,6 @@ public class SpiralMatrix {
         int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         SpiralMatrix obj = new SpiralMatrix();
         System.out.println(obj.spiralOrder(matrix));
+        
     }
 }
