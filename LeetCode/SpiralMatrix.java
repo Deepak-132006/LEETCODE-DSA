@@ -6,24 +6,34 @@ import java.util.List;
 public class SpiralMatrix {
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> result = new ArrayList<>();
-        for (int i = 0; i < matrix.length; i++) {
-            if (i == 0) {
-                for (int k = 0; k < matrix[i].length; k++) {
+        int top = 0, bottom = matrix.length - 1;
+        int left = 0, right = matrix[0].length - 1;
 
-                    result.add(matrix[i][k]);
+        while (top <= bottom && left <= right) {
+            for (int i = left; i <= right; i++) {
+                result.add(matrix[top][i]);
+            }
+            top++;
+
+            for (int i = top; i <= bottom; i++) {
+                result.add(matrix[i][right]);
+            }
+            right--;
+
+            if (top <= bottom) {
+
+                for (int i = right; i >= left; i--) {
+                    result.add(matrix[bottom][i]);
                 }
+                bottom--;
             }
 
-            if (i >= matrix.length - 2) {
-                
-                for (int j = matrix[i].length - 1; j >= 0; j--) {
-                    result.add(matrix[i][matrix[j].length - 1]);
+            if (right <= left) {
+                for (int i = bottom; i >= top; i--) {
+                    result.add(matrix[i][left]);
                 }
-            }
-        }
-        for (int i = 1; i < matrix.length - 1; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                result.add(matrix[i][j]);
+                left++;
+
             }
         }
         return result;
@@ -33,6 +43,6 @@ public class SpiralMatrix {
         int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         SpiralMatrix obj = new SpiralMatrix();
         System.out.println(obj.spiralOrder(matrix));
-        
+
     }
 }
