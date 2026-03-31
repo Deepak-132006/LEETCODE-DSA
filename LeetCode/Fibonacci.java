@@ -9,7 +9,7 @@ public class Fibonacci {
     }
     public static void main(String[] args) {
         Fibonacci obj = new Fibonacci();
-        int n = 2;
+        int n = 10;
         System.out.println(obj.fab(n));
     }
 }
