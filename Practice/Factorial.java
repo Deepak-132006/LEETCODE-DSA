@@ -2,11 +2,9 @@ package Practice;
 
 public class Factorial {
     public static int factorial(int n) {
-        int fact = 1;
-        for (int i = n; i >= 1; i--) {
-            fact *= i;            
-        }
-        return fact;
+        if (n < 0) throw new IllegalArgumentException("Negative not Allowed");
+        if(n == 1 || n == 0) return 1;
+        return n * factorial( n - 1);
     }
 
     public static void main(String[] args) {
