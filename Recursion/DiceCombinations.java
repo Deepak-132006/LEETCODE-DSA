@@ -22,7 +22,7 @@ public class DiceCombinations {
         for (int i = start; i < comb.length; i++) {
             path.add(comb[i]);
 
-            dice(comb, path, target, i + 1, sum + comb[i]);
+            dice(comb, path, target, 0, sum + comb[i]);
 
             path.remove(path.size() - 1);
         }
