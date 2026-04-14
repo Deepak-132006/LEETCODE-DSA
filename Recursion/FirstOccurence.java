@@ -3,7 +3,6 @@ package Recursion;
 public class FirstOccurence {
     public int firstOccurrence(int[] arr, int index, int target){
         if(index == arr.length) return -1;
-        long i = 9223372036854775807L;
         if(arr[index] == target){
             return index;
         }
