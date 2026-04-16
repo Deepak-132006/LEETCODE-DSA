@@ -8,6 +8,7 @@ public class Permutations {
         if (path.size() == arr.length) {
             res.add(path.get(start - 1));
         }
+        
         for (int i = start; i < arr.length; i++) {
             path.add(arr[i]);
 
