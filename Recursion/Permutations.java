@@ -4,22 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Permutations {
-    public static void permutations(int[] arr, List<Integer> res, List<Integer> path, int start) {
-        if (path.size() == arr.length) {
-            res.add(path.get(start - 1));
+    public static List<List<Integer>> permutations(int[] arr, List<Integer> res, List<Integer> temp) {
+        List<List<Integer>> result = new ArrayList<>();
+        backtrack(arr, new ArrayList<>(), result);
+        return result;
+    }
+
+    public static void backtrack (int[] arr, List<Integer> temp, List<List<Integer>> result){
+        if(temp.size() == arr.length){
+            result.add(new ArrayList<>(temp));
+            return;
         }
-        
-        for (int i = start; i < arr.length; i++) {
-            path.add(arr[i]);
-
-            permutations(arr, res, path, i + 1);
-
-            path.remove(path.size() - 1);
+        for(int num : arr){
+            if(temp.contains(num)){
+                continue;
+            }
+            temp.add(num);
+            backtrack(arr, temp, result);
+            temp.remove(temp.size() - 1);
         }
     }
 
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3 };
-        permutations(arr, new ArrayList<>() ,new ArrayList<>(), 0);
+        System.out.println(permutations(arr, new ArrayList<>(), new ArrayList<>()));
     }
 }
