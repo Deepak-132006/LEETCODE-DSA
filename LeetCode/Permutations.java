@@ -4,40 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Permutations {
-    List<List<Integer>> result = new ArrayList<>();
-
-    public List<List<Integer>> permute(int[] nums) {
-        permutate(0, nums);
+       public static List<List<Integer>> permutations(int[] arr, List<Integer> res, List<Integer> temp) {
+        List<List<Integer>> result = new ArrayList<>();
+        backtrack(arr, new ArrayList<>(), result);
         return result;
     }
 
-    public void permutate(int index, int[] nums) {
-        if (index == nums.length) {
-            List<Integer> temp = new ArrayList<>();
-            for (int num : nums) {
-                temp.add(num);
-            }
-            result.add(temp);
+    public static void backtrack (int[] arr, List<Integer> temp, List<List<Integer>> result){
+        if(temp.size() == arr.length){
+            result.add(new ArrayList<>(temp));
             return;
         }
-        for (int i = index; i < nums.length; i++) {
-
-            int temp = nums[i];
-            nums[i] = nums[index];
-            nums[index] = temp;
-
-            permutate(index + 1, nums);
-
-            temp = nums[index];
-            nums[index] = nums[i];
-            nums[i] = temp;
-
+        for(int num : arr){
+            if(temp.contains(num)){
+                continue;
+            }
+            temp.add(num);
+            backtrack(arr, temp, result);
+            temp.remove(temp.size() - 1);
         }
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3};
-        Permutations obj = new Permutations();
-        System.out.println(obj.permute(nums));
+        int[] arr = { 1, 2, 3 };
+        System.out.println(permutations(arr, new ArrayList<>(), new ArrayList<>()));
     }
 }
