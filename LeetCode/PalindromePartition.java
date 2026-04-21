@@ -27,6 +27,7 @@ public class PalindromePartition {
     }
 
     public static boolean isPal(String s) {
+        
         int left = 0;
         int right = s.length() - 1;
 
