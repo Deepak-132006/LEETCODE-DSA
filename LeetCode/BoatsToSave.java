@@ -13,7 +13,7 @@ public class BoatsToSave {
             if(people[right] == limit){
                 boat++;
                 right--;
-            } else if (people[left] + people[right] == limit){
+            } else if (people[left] + people[right] <= limit){
                 boat++;
                 left++;
                 right--;
