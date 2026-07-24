@@ -7,7 +7,7 @@
 [![Java](https://img.shields.io/badge/Language-Java-orange?style=flat-square&logo=java)](https://www.java.com/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-FFA116?style=flat-square&logo=leetcode)](https://leetcode.com/u/deepak-136-n/)
 [![DSA](https://img.shields.io/badge/Focus-DSA-blue?style=flat-square)](#)
-[![Commits](https://img.shields.io/badge/Commits-192%2B-brightgreen?style=flat-square)](#)
+[![Commits](https://img.shields.io/badge/Commits-200%2B-brightgreen?style=flat-square)](#)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)](#-license)
 
 </div>
