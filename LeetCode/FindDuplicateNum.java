@@ -1,19 +1,20 @@
 package LeetCode;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class FindDuplicateNum {
     public int findDuplicate(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
+        int slow = 0, fast = 0;
+        do {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        } while (slow != fast);
 
-        for (int num : nums){
-            map.put(num, map.getOrDefault(num, 0) + 1);
-            if(map.get(num) == 2){
-                return num;
-            }
+        slow = 0;
+
+        while (slow != fast){
+            slow = nums[slow];
+            fast = nums[fast];
         }
-        return -1;
+        return slow;
     }
     public static void main(String[] args) {
         int[] nums = {1,3,4,2,2};
