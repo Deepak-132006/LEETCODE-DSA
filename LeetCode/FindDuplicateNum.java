@@ -8,6 +8,7 @@ public class FindDuplicateNum {
             fast = nums[nums[fast]];
         } while (slow != fast);
 
+        
         slow = 0;
 
         while (slow != fast){
