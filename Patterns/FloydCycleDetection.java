@@ -12,7 +12,7 @@ class Node {
 
 public class FloydCycleDetection {
 
-    public static boolean hasCycle(Node head){
+    public boolean hasCycle(Node head){
         Node slow = head;
         Node fast = head;
 
