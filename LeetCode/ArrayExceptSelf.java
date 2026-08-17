@@ -12,8 +12,11 @@ public class ArrayExceptSelf {
         for (int i = 1; i < n; i++) {
             productArray[i] = productArray[i - 1] * nums[i - 1];
         }
+        for(int num : productArray){
+            System.out.println(num);
+        }
         int right = 1;
-        for(int i = n - 1; i >= 0; i--){
+        for (int i = n - 1; i >= 0; i--) {
             productArray[i] *= right;
             right *= nums[i];
         }
@@ -22,7 +25,7 @@ public class ArrayExceptSelf {
 
     public static void main(String[] args) {
         ArrayExceptSelf obj = new ArrayExceptSelf();
-        int[] nums = { -1,1,0,-3,3 };
+        int[] nums = { 1, 2, 3, 4};
         System.out.println(Arrays.toString(obj.productExceptSelf(nums)));
     }
 }
