@@ -7,15 +7,15 @@ public class AssignCookies {
         Arrays.sort(g);
         Arrays.sort(s);
 
-        int index = 0;
-        int happyChild = 0;
-        while (index < g.length && index < s.length) {
-            if (g[index] <= s[index]) {
-                happyChild++;
+        int child = 0;
+        int cookie = 0;
+        while (child < g.length && cookie < s.length) {
+            if (g[child] <= s[cookie]) {
+                child++;
             }
-            index++;
+            cookie++;
         }
-        return happyChild;
+        return child;
     }
 
     public static void main(String[] args) {
