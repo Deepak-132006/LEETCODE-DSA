@@ -5,8 +5,6 @@ public class ReverseWordsIII {
         StringBuilder result = new StringBuilder();
         String[] words = s.split("\\s+");
         for (int i = 0; i < words.length; i++) {
-            int left = words[i].length();
-            int right = 0;
             for (int j = words[i].length() - 1; j >= 0; j--) {
                 result.append(words[i].charAt(j));
             }
