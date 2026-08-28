@@ -45,7 +45,7 @@ class LinkedList {
     void insertAtPosition(int data, int position) {
         Node newNode = new Node(data);
 
-        if(position == 0){
+        if (position == 0) {
             newNode.next = head;
             head = newNode;
             return;
@@ -53,29 +53,52 @@ class LinkedList {
 
         Node current = head;
 
-        for(int i = 0; i < position - 1; i++){
+        for (int i = 0; i < position - 1; i++) {
             current = current.next;
         }
         newNode.next = current.next;
         current.next = newNode;
     }
 
-    void deleteAtPosition(int position){
-        if(head == null){
+    void deleteAtPosition(int position) {
+        if (head == null) {
             return;
         }
 
-        if(position == 0){
+        if (position == 0) {
             head = head.next;
             return;
         }
 
         Node current = head;
 
-        for(int i = 0; i < position - 1; i++){
+        for (int i = 0; i < position - 1; i++) {
             current = current.next;
         }
         current.next = current.next.next;
+    }
+
+    boolean search(int target) {
+        Node current = head;
+
+        while (current != null) {
+            if (current.data == target) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+    int length() {
+        int count = 0;
+
+        Node current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
     }
 }
 
@@ -88,10 +111,12 @@ public class PracticeTwo {
         list.insertAtEnd(30);
 
         list.insertAtBeginning(0);
-        
+
         list.insertAtPosition(5, 1);
         list.display();
         list.deleteAtPosition(0);
         list.display();
+        System.out.println(list.search(30));
+        System.out.println(list.length());
     }
 }
