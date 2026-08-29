@@ -100,6 +100,18 @@ class LinkedList {
         }
         return count;
     }
+
+    void reverse() {
+        Node prev = null;
+        Node current = head;
+        while (current != null) {
+            Node next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
+    }
 }
 
 public class PracticeTwo {
@@ -118,5 +130,7 @@ public class PracticeTwo {
         list.display();
         System.out.println(list.search(30));
         System.out.println(list.length());
+        list.reverse();
+        list.display();
     }
 }
