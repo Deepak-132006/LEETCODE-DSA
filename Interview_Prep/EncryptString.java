@@ -15,5 +15,6 @@ public class EncryptString {
             res.append(result);
         }
         System.out.println(res);
+        sc.close();
     }
 }
