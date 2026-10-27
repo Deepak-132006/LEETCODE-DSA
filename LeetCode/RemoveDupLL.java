@@ -50,7 +50,6 @@ public class RemoveDupLL {
         fifth.next = null;
 
         ListNode head = first;
-
         System.out.println(new RemoveDupLL().deleteDuplicates(head));
         new RemoveDupLL().printList(head);
     }
